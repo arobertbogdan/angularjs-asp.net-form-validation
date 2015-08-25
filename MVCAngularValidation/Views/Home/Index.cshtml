@@ -1,0 +1,55 @@
+﻿@model MVCAngularValidation.Models.UserRegistrationModel
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+
+<form id="TestForm" validate>
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>UserRegistrationModel</h4>
+        <hr/>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Username, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.AngularInputFor(model => model.Username, htmlAttributes: new {@class = "form-control"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.AngularInputFor(model => model.Password, htmlAttributes: new {@class = "form-control"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.AngularInputFor(model => model.ConfirmPassword, htmlAttributes: new {@class = "form-control"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.AngularInputFor(model => model.Email, htmlAttributes: new {@class = "form-control"})
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" ng-click="vm.submit($event)"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+@{
+    Html.RenderPartial("View");
+}

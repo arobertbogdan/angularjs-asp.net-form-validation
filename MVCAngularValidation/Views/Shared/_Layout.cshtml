@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body ng-app="angularMvc">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+
+    <script src="~/Scripts/app/_all.js"></script>
+    <script src="~/Scripts/app/validationModule/Infrastructure/ValidationObject.js"></script>
+    <script src="~/Scripts/app/validationModule/Infrastructure/ValidationDispatcher.js"></script>
+    <script src="~/Scripts/app/validationModule/services/InputValidationTypes.js"></script>
+    <script src="~/Scripts/app/validationModule/services/FormValidationService.js"></script>
+    <script src="~/Scripts/app/validationModule/services/InputValidationService.js"></script>
+    <script src="~/Scripts/app/validationModule/services/InputValidationFlowService.js"></script>
+    <script src="~/Scripts/app/validationModule/providers/validationBootstrap.js"></script>
+    <script src="~/Scripts/app/validationModule/controllers/FormValidationController.js"></script>
+    <script src="~/Scripts/app/validationModule/directives/validation/ValidableForm.js"></script>
+    <script src="~/Scripts/app/validationModule/directives/validation/ValidableInput.js"></script>
+    <script src="~/Scripts/app/validationModule/validationModule.js"></script>
+
+    <script src="~/Scripts/app/CustomBootstraper.js"></script>
+
+    <script src="~/Scripts/app/app.js"></script>
+
+</body>
+</html>
